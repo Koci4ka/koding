@@ -1,0 +1,25 @@
+#include <stdio.h> // №67
+
+int main()
+{
+    int N, i, a[N], k;
+    printf("Enter N\n");
+    scanf("%d", &N);
+    k = 0;
+    for (int i=0; i<=N; i=i+1)
+    {
+        printf("enter a\n");
+        scanf("%d", &a[i]);
+       if (a[i]%2!=0) k = a[i];
+      }
+      if (k != 0) {
+      for (int i=0; i<=N; i=i+1) {
+          if (a[i]%2!=0) a[i] = a[i]+k;
+      }
+      }
+  for (int i=0; i<=N; i=i+1) {
+       printf("%d ", a[i]);
+      }
+return 0;
+}
+ 
